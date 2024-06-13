@@ -1,5 +1,5 @@
 {
     "remedios": [
-      { "id": 1, "nome": "Dipirona 500MG", "fabricante": "Astrazenica", "protocolo_clinico":"Tratamento de dor de cabeça"}
+      { "id": 1, "nome": "Dipirona 500MG", "fabricante": "Astrazenica", "protocolo_clinico":"Tratamento de dor de cabeça","lote": "5647982", "fabricação":"10/02/2019","validade":"10/02/2025"}
     ]
   }
