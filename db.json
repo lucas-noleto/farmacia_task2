@@ -1,5 +1,139 @@
 {
-    "remedios": [
-      { "id": 1, "nome": "Dipirona 500MG", "fabricante": "Astrazenica", "protocolo_clinico":"Tratamento de dor de cabeça","lote": "5647982", "fabricação":"10/02/2019","validade":"10/02/2025"}
-    ]
-  }
+  "remedios": [
+    {
+      "id": "1",
+      "nome": "Dipirona 500MG",
+      "fabricante": "Astrazenica",
+      "protocolo_clinico": "Tratamento de dor de cabeça",
+      "lote": "5647982",
+      "fabricacao": "10/02/2019",
+      "validade": "10/02/2025"
+    },
+    {
+      "id": "2",
+      "nome": "Paracetamol 750MG",
+      "fabricante": "Bayer",
+      "protocolo_clinico": "Redução de febre",
+      "lote": "6758492",
+      "fabricacao": "15/03/2019",
+      "validade": "15/03/2025"
+    },
+    {
+      "id": "3",
+      "nome": "Ibuprofeno 600MG",
+      "fabricante": "Pfizer",
+      "protocolo_clinico": "Alívio de inflamações",
+      "lote": "7891234",
+      "fabricacao": "20/04/2019",
+      "validade": "20/04/2025"
+    },
+    {
+      "id": "4",
+      "nome": "Amoxicilina 500MG",
+      "fabricante": "GSK",
+      "protocolo_clinico": "Tratamento de infecções bacterianas",
+      "lote": "3216549",
+      "fabricacao": "25/05/2019",
+      "validade": "25/05/2025"
+    },
+    {
+      "id": "5",
+      "nome": "Azitromicina 500MG",
+      "fabricante": "Novartis",
+      "protocolo_clinico": "Tratamento de infecções respiratórias",
+      "lote": "4567890",
+      "fabricacao": "30/06/2019",
+      "validade": "30/06/2025"
+    },
+    {
+      "id": "6",
+      "nome": "Cetirizina 10MG",
+      "fabricante": "Merck",
+      "protocolo_clinico": "Tratamento de alergias",
+      "lote": "6549871",
+      "fabricacao": "05/07/2019",
+      "validade": "05/07/2025"
+    },
+    {
+      "id": "7",
+      "nome": "Loratadina 10MG",
+      "fabricante": "Sanofi",
+      "protocolo_clinico": "Alívio de sintomas alérgicos",
+      "lote": "8523697",
+      "fabricacao": "10/08/2019",
+      "validade": "10/08/2025"
+    },
+    {
+      "id": "8",
+      "nome": "Omeprazol 20MG",
+      "fabricante": "Teva",
+      "protocolo_clinico": "Tratamento de úlceras gástricas",
+      "lote": "9632584",
+      "fabricacao": "15/09/2019",
+      "validade": "15/09/2025"
+    },
+    {
+      "id": "9",
+      "nome": "Pantoprazol 40MG",
+      "fabricante": "Roche",
+      "protocolo_clinico": "Tratamento de refluxo gastroesofágico",
+      "lote": "1478529",
+      "fabricacao": "20/10/2019",
+      "validade": "20/10/2025"
+    },
+    {
+      "id": "10",
+      "nome": "Lansoprazol 30MG",
+      "fabricante": "Takeda",
+      "protocolo_clinico": "Tratamento de esofagite",
+      "lote": "2589634",
+      "fabricacao": "25/11/2019",
+      "validade": "25/11/2025"
+    },
+    {
+      "id": "11",
+      "nome": "Cloridrato de Metformina 500MG",
+      "fabricante": "Eli Lilly",
+      "protocolo_clinico": "Tratamento de diabetes tipo 2",
+      "lote": "3697412",
+      "fabricacao": "30/12/2019",
+      "validade": "30/12/2025"
+    },
+    {
+      "id": "12",
+      "nome": "Glibenclamida 5MG",
+      "fabricante": "Bristol-Myers Squibb",
+      "protocolo_clinico": "Controle de diabetes mellitus",
+      "lote": "7418523",
+      "fabricacao": "10/01/2020",
+      "validade": "10/01/2026"
+    },
+    {
+      "id": "13",
+      "nome": "Enalapril 10MG",
+      "fabricante": "Astrazenica",
+      "protocolo_clinico": "Tratamento de hipertensão",
+      "lote": "1234567",
+      "fabricacao": "15/02/2020",
+      "validade": "15/02/2026"
+    },
+    {
+      "id": "14",
+      "nome": "Losartana 50MG",
+      "fabricante": "Merck",
+      "protocolo_clinico": "Controle da pressão arterial",
+      "lote": "2345678",
+      "fabricacao": "20/03/2020",
+      "validade": "20/03/2026"
+    },
+    {
+      "nome": "Hidroclorotiazida 25MG",
+      "fabricante": "Sanofi",
+      "protocolo_clinico": "Tratamento de hipertensão e edema",
+      "lote": "3456789",
+      "fabricacao": "25/04/2025",
+      "validade": "25/04/2026",
+      "id": "15"
+    }
+  ]
+}

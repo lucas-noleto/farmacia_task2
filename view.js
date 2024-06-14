@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
                 document.getElementById('fabricante').value = data.fabricante;
                 document.getElementById('protocolo_clinico').value = data.protocolo_clinico;
                 document.getElementById('lote').value = data.lote;
-                document.getElementById('fabricacao').value = data.fabricação;
+                document.getElementById('fabricacao').value = data.fabricacao;
                 document.getElementById('validade').value = data.validade;
             })
             .catch((error) => {
