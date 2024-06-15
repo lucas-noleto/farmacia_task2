@@ -28,13 +28,13 @@
       "validade": "20/04/2025"
     },
     {
-      "id": "4",
       "nome": "Amoxicilina 500MG",
       "fabricante": "GSK",
       "protocolo_clinico": "Tratamento de infecções bacterianas",
-      "lote": "3216549",
+      "lote": "3216549654658",
       "fabricacao": "25/05/2019",
-      "validade": "25/05/2025"
+      "validade": "25/05/2025",
+      "id": "4"
     },
     {
       "id": "5",
@@ -134,6 +134,16 @@
       "fabricacao": "25/04/2025",
       "validade": "25/04/2026",
       "id": "15"
-    }
+    },
+    {
+      "id": "16",
+      "nome": "Pérola",
+      "fabricante": "Sanofi",
+      "protocolo_clinico": "Anticoncepcional",
+      "lote": "34512319",
+      "fabricacao": "25/04/2022",
+      "validade": "25/04/2026"
+      
+    } 
   ]
 }
