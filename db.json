@@ -143,7 +143,24 @@
       "lote": "34512319",
       "fabricacao": "25/04/2022",
       "validade": "25/04/2026"
-      
-    } 
+    },
+    {
+      "id": "18",
+      "nome": "Teste1",
+      "fabricante": "Teste1",
+      "protocoloClinico": "123",
+      "lote": "123",
+      "dataFabricacao": "19/06/2024",
+      "validade": "19/06/2024"
+    },
+    {
+      "nome": "Teste2",
+      "fabricante": "Teste2",
+      "protocolo_clinico": "undefined",
+      "lote": "1234",
+      "fabricacao": "undefined",
+      "validade": "19/06/2024",
+      "id": "19"
+    }
   ]
 }
