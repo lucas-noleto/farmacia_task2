@@ -38,9 +38,9 @@ async function cadastraRemedios() {
 		id: id,
 		nome: document.getElementById('nomeRemedio').value,
 		fabricante: document.getElementById('fabricanteRemedio').value,
-		protocoloClinico: document.getElementById('protocoloClinico').value,
+		protocolo_clinico: document.getElementById('protocoloClinico').value,
 		lote: document.getElementById('lote').value,
-		dataFabricacao: document.getElementById('fabricacao').value,
+		fabricacao: document.getElementById('fabricacao').value,
 		validade: document.getElementById('validade').value
 	};
 
@@ -63,4 +63,4 @@ async function cadastraRemedios() {
 	}
 }
 
-// Add a confirmação de campo vazio 
+// Add a confirmação de campo vazio
