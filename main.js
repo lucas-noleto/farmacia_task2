@@ -96,7 +96,13 @@ document.getElementById('formEstoque').addEventListener('submit', async function
 	e.preventDefault();
 
 	const estoque = document.getElementById('estoque').value;
+	const parsedEstoque = parseInt(estoque, 10);
 	const remedioId = document.getElementById('formEstoque').dataset.remedioId;
+
+	if (isNaN(parsedEstoque) || parsedEstoque < 0 ) {
+        alert('Erro: O estoque não pode ser negativo ou diferente de um número inteiro.');
+        return;
+    }
 
 	try {
 		const response = await fetch(`http://localhost:3000/remedios/${remedioId}`, {
