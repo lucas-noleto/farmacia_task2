@@ -143,6 +143,33 @@
       "lote": "34512319",
       "fabricacao": "25/04/2022",
       "validade": "25/04/2026"
+    },
+    {
+      "id": "30",
+      "nome": "Rispiridona",
+      "fabricante": "1231421",
+      "protocolo_clinico": "Tratamento de bipolaridade",
+      "lote": "12412",
+      "fabricacao": "07/12/2023",
+      "validade": "10/12/2029"
+    },
+    {
+      "id": "31",
+      "nome": "Clonazepam",
+      "fabricante": "Genérico",
+      "protocolo_clinico": "Tratamento de bipolaridade",
+      "lote": "243234",
+      "fabricacao": "08/12/2022",
+      "validade": "08/12/2030"
+    },
+    {
+      "id": "32",
+      "nome": "Alprazolam 2mg",
+      "fabricante": "Genérico",
+      "protocolo_clinico": "Tratamento de Bipolaridade",
+      "lote": "12412",
+      "fabricacao": "12/05/2023",
+      "validade": "15/05/2030"
     }
   ]
 }

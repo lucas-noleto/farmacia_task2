@@ -62,6 +62,7 @@ async function cadastraRemedios() {
 	} catch (error) {
 		console.error('Erro ao cadastrar o remédio:', error.message);
 	}
+	window.location.href='index.html'
 }
 
 // Add a confirmação de campo vazio
