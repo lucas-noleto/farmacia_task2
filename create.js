@@ -41,7 +41,8 @@ async function cadastraRemedios() {
 		protocolo_clinico: document.getElementById('protocoloClinico').value,
 		lote: document.getElementById('lote').value,
 		fabricacao: document.getElementById('fabricacao').value,
-		validade: document.getElementById('validade').value
+		validade: document.getElementById('validade').value,
+		estoque: 0
 	};
 
 	try {
