@@ -1,96 +1,83 @@
 // Função para obter parâmetros da URL
-function getParameterByName(id) {
-	const url = new URL(window.location.href);
-	return url.searchParams.get(id);
+function getParameterById(id) {
+    const url = new URL(window.location.href);
+    return url.searchParams.get(id);
 }
 
-// Função para preencher o formulário com os dados do remédio
-async function preencherFormulario(id) {
-	try {
-		const response = await fetch(`http://localhost:3000/remedios/${id}`);
-		const remedio = await response.json();
+// Adicionar evento de submit ao formulário de atualização
+document.getElementById('formUpdate').addEventListener('submit', async function (e) {
+    e.preventDefault();
+    
+    const nomeRemedio = document.getElementById('nomeRemedio').value;
+    const fabricanteRemedio = document.getElementById('fabricanteRemedio').value;
+    const protocoloClinico = document.getElementById('protocoloClinico').value;
+    const lote = document.getElementById('lote').value;
+    const fabricacao = document.getElementById('fabricacao').value;
+    const validade = document.getElementById('validade').value;
+    const remedioId = this.dataset.remedioId; // Usando 'this' para referenciar o próprio formulário
 
-		const htmlForm = document.getElementById("atualizarForm");
+    const url = `http://localhost:3000/remedios/${remedioId}`;
 
-		htmlForm.innerHTML =
-			`
-        <div class="mb-3">
-          <label for="nomeRemedio" class="form-label">Novo Nome:</label>
-          <input type="text" class="form-control" id="nomeRemedio" name="nomeRemedio" placeholder="Digite o novo nome do remédio" value="${remedio.nome}">
-        </div>
-        <div class="mb-3">
-          <label for="fabricanteRemedio" class="form-label">Novo Fabricante:</label>
-          <input type="text" class="form-control" id="fabricanteRemedio" name="fabricanteRemedio" placeholder="Digite o novo fabricante do remédio" value="${remedio.fabricante}">
-        </div>
-        <div class="mb-3">
-          <label for="protocoloClinico" class="form-label">Protocolo Clínico:</label>
-          <input type="text" class="form-control" id="protocoloClinico" name="protocoloClinico" placeholder="Digite o protocolo clínico" value="${remedio.protocolo_clinico}">
-        </div>
-        <div class="mb-3">
-          <label for="lote" class="form-label">Lote:</label>
-          <input type="text" class="form-control" id="lote" name="lote" placeholder="Digite o lote" value="${remedio.lote}">
-        </div>
-        <div class="mb-3">
-          <label for="fabricacao" class="form-label">Data de Fabricação:</label>
-          <input type="text" class="form-control" id="fabricacao" name="fabricacao" value="${remedio.fabricacao}">
-        </div>
-        <div class="mb-3">
-          <label for="validade" class="form-label">Data de Validade:</label>
-          <input type="text" class="form-control" id="validade" name="validade" value="${remedio.validade}">
-        </div>
-        <button type="button" class="btn btn-primary" onclick="atualizarRemedios()">Atualizar Remédio</button>
-        <button type="button" class="btn btn-primary" onclick="window.history.back()">Voltar</button>
-    	`;
-	} catch (error) {
-		console.error('Erro ao buscar o remédio:', error);
-	}
-}
+    const requestOptions = {
+        method: 'PUT',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            nome: nomeRemedio,
+            fabricante: fabricanteRemedio,
+            protocolo_clinico: protocoloClinico,
+            lote: lote,
+            fabricacao: fabricacao,
+            validade: validade
+        })
+    };
 
-// Chama a função preencherFormulario ao carregar a página
-document.addEventListener('DOMContentLoaded', () => {
-	const idRemedio = getParameterByName('id');
-	if (idRemedio) {
-		preencherFormulario(idRemedio);
-	}
+    try {
+        const response = await fetch(url, requestOptions);
+        if (!response.ok) {
+            throw new Error('Erro ao atualizar remédio: ' + response.statusText);
+        }
+        
+        const data = await response.json();
+        console.log('Remédio atualizado:', data);
+        alert('Remédio atualizado com sucesso!');
+        // Esconder o modal após atualização
+        const modal = bootstrap.Modal.getInstance(document.getElementById('modalUpdate'));
+        modal.hide();
+    } catch (error) {
+        console.error('Erro na requisição:', error);
+        alert('Erro ao atualizar remédio. Verifique o console para mais detalhes.');
+    }
 });
 
-async function atualizarRemedios() {
-	const nomeRemedio = document.getElementById('nomeRemedio').value;
-	const fabricanteRemedio = document.getElementById('fabricanteRemedio').value;
-	const protocoloClinico = document.getElementById('protocoloClinico').value;
-	const lote = document.getElementById('lote').value;
-	const fabricacao = document.getElementById('fabricacao').value;
-	const validade = document.getElementById('validade').value;
+// Adicionar evento ao botão "Voltar" no modal de atualização
+document.querySelector('#modalUpdate .btn-secondary').addEventListener('click', function () {
+    const modal = bootstrap.Modal.getInstance(document.getElementById('modalUpdate'));
+    modal.hide();
+});
 
-	const url = `http://localhost:3000/remedios/${getParameterByName("id")}`;
+// Função para abrir o modal de atualização
+function abrirModalUpdate(remedioId) {
+    const modalElement = document.getElementById('modalUpdate');
+    const formUpdate = document.getElementById('formUpdate');
+    formUpdate.dataset.remedioId = remedioId;
 
-	const requestOptions = {
-		method: 'PUT',
-		headers: {
-			'Content-Type': 'application/json'
-		},
-		body: JSON.stringify({
-			nome: nomeRemedio,
-			fabricante: fabricanteRemedio,
-			protocolo_clinico: protocoloClinico,
-			lote: lote,
-			fabricacao: fabricacao,
-			validade: validade
-		})
-	};
-
-	try {
-		const response = await fetch(url, requestOptions);
-		if (!response.ok) {
-			throw new Error('Erro ao atualizar remédio: ' + response.statusText);
-		}
-
-		const data = await response.json();
-		console.log('Remédio atualizado:', data);
-		alert('Remédio atualizado com sucesso!');
-		document.getElementById('atualizarForm').reset();
-	} catch (error) {
-		console.error('Erro na requisição:', error);
-		alert('Erro ao atualizar remédio. Verifique o console para mais detalhes.');
-	}
+    // Buscar o remédio específico para preencher o modal
+    fetch(`http://localhost:3000/remedios/${remedioId}`)
+        .then(response => response.json())
+        .then(remedio => {
+            // Preencher os campos do formulário com os dados do remédio
+            document.getElementById('nomeRemedio').value = remedio.nome || '';
+            document.getElementById('fabricanteRemedio').value = remedio.fabricante || '';
+            document.getElementById('protocoloClinico').value = remedio.protocolo_clinico || '';
+            document.getElementById('lote').value = remedio.lote || '';
+            document.getElementById('fabricacao').value = remedio.fabricacao || '';
+            document.getElementById('validade').value = remedio.validade || '';
+            
+            // Mostrar o modal após preencher os dados
+            const modal = new bootstrap.Modal(modalElement);
+            modal.show();
+        })
+        .catch(error => console.error('Erro ao buscar o remédio:', error));
 }
