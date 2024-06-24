@@ -1,9 +1,3 @@
-// Função para obter parâmetros da URL
-function getParameterById(id) {
-    const url = new URL(window.location.href);
-    return url.searchParams.get(id);
-}
-
 // Adicionar evento de submit ao formulário de atualização
 document.getElementById('formUpdate').addEventListener('submit', async function (e) {
     e.preventDefault();
