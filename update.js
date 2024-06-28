@@ -15,32 +15,32 @@ async function preencherFormulario(id) {
 		htmlForm.innerHTML =
 			`
         <div class="mb-3">
-          <label for="nomeRemedio" class="form-label">Novo Nome:</label>
-          <input type="text" class="form-control" id="nomeRemedio" name="nomeRemedio" placeholder="Digite o novo nome do remédio" value="${remedio.nome}">
+        <label for="nomeRemedio" class="form-label form-primary"><strong>Nome:</label>
+        <input type="text" class="form-control" id="nomeRemedio" name="nomeRemedio" placeholder="Digite o nome do medicamento" value="${remedio.nome}">
         </div>
         <div class="mb-3">
-          <label for="fabricanteRemedio" class="form-label">Novo Fabricante:</label>
-          <input type="text" class="form-control" id="fabricanteRemedio" name="fabricanteRemedio" placeholder="Digite o novo fabricante do remédio" value="${remedio.fabricante}">
+        <label for="fabricanteRemedio" class="form-label"><strong>Fabricante:</label>
+        <input type="text" class="form-control" id="fabricanteRemedio" name="fabricanteRemedio" placeholder="Digite o fabricante do medicamento" value="${remedio.fabricante}">
         </div>
         <div class="mb-3">
-          <label for="protocoloClinico" class="form-label">Protocolo Clínico:</label>
-          <input type="text" class="form-control" id="protocoloClinico" name="protocoloClinico" placeholder="Digite o protocolo clínico" value="${remedio.protocolo_clinico}">
+        <label for="protocoloClinico" class="form-label"><strong>Protocolo Clínico:</label>
+        <input type="text" class="form-control" id="protocoloClinico" name="protocoloClinico" placeholder="Digite o protocolo clínico" value="${remedio.protocolo_clinico}">
         </div>
         <div class="mb-3">
-          <label for="lote" class="form-label">Lote:</label>
-          <input type="text" class="form-control" id="lote" name="lote" placeholder="Digite o lote" value="${remedio.lote}">
+        <label for="lote" class="form-label"><strong>Lote:</label>
+        <input type="text" class="form-control" id="lote" name="lote" placeholder="Digite o lote" value="${remedio.lote}">
         </div>
         <div class="mb-3">
-          <label for="fabricacao" class="form-label">Data de Fabricação:</label>
-          <input type="text" class="form-control" id="fabricacao" name="fabricacao" value="${remedio.fabricacao}">
+        <label for="fabricacao" class="form-label"><strong>Data de Fabricação:</label>
+        <input type="date" class="form-control" id="fabricacao" name="fabricacao" value="${remedio.fabricacao}">
         </div>
         <div class="mb-3">
-          <label for="validade" class="form-label">Data de Validade:</label>
-          <input type="text" class="form-control" id="validade" name="validade" value="${remedio.validade}">
+        <label for="validade" class="form-label"><strong>Data de Validade:</label>
+        <input type="date" class="form-control" id="validade" name="validade" value="${remedio.validade}">
         </div>
         <button type="button" class="btn btn-primary" onclick="atualizarRemedios()">Atualizar Remédio</button>
         <button type="button" class="btn btn-primary" onclick="window.history.back()">Voltar</button>
-    	`;
+    `;
 	} catch (error) {
 		console.error('Erro ao buscar o remédio:', error);
 	}

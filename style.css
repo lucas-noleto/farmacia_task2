@@ -9,7 +9,7 @@
     position: sticky;
     top: 0;
     background-color: chartreuse;
-    padding: 0 10px 0 10px;
+    margin: 0 10px 0 10px;
     border: 2px solid chartreuse;
     border-radius: 5px;
     display: flex;
@@ -17,7 +17,7 @@
 }
 
 
-#container-index-topo{
+#container-nav-items{
     /* border: solid red; */
     display: flex;
     flex-direction: row;

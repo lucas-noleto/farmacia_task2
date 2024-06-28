@@ -171,6 +171,16 @@
       "lote": "12412",
       "fabricacao": "12/05/2023",
       "validade": "15/05/2030"
+    },
+    {
+      "id": "33",
+      "nome": "Buscopan 10MG",
+      "fabricante": "Boehringer",
+      "protocolo_clinico": "Tratamento de cólicas",
+      "lote": "15166156",
+      "fabricacao": "2024-02-14",
+      "validade": "2030-06-05",
+      "estoque": 0
     }
   ]
 }
