@@ -59,7 +59,8 @@
 	</main>
 
 	<!-- Modal para editar o estoque -->
-	<div class="modal fade" id="modalEditarEstoque" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal fade" id="modalEditarEstoque" tabindex="-1" aria-labelledby="exampleModalLabel"
+		aria-hidden="true">
 		<div class="modal-dialog">
 			<div class="modal-content">
 				<div class="modal-header">
@@ -79,7 +80,59 @@
 		</div>
 	</div>
 
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+	<!-- Modal update-->
+	<div class="modal fade" id="modalUpdate" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+		aria-labelledby="staticBackdropLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h1 class="modal-title fs-5" id="staticBackdropLabel">Atualizar Remédio</h1>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<form id="formUpdate">
+						<div class="mb-3">
+							<label for="nomeRemedio" class="form-label">Novo Nome:</label>
+							<input type="text" class="form-control" id="nomeRemedio" name="nomeRemedio"
+								placeholder="Digite o novo nome do remédio">
+						</div>
+						<div class="mb-3">
+							<label for="fabricanteRemedio" class="form-label">Novo Fabricante:</label>
+							<input type="text" class="form-control" id="fabricanteRemedio" name="fabricanteRemedio"
+								placeholder="Digite o novo fabricante do remédio">
+						</div>
+						<div class="mb-3">
+							<label for="protocoloClinico" class="form-label">Protocolo Clínico:</label>
+							<input type="text" class="form-control" id="protocoloClinico" name="protocoloClinico"
+								placeholder="Digite o protocolo clínico">
+						</div>
+						<div class="mb-3">
+							<label for="lote" class="form-label">Lote:</label>
+							<input type="text" class="form-control" id="lote" name="lote" placeholder="Digite o lote">
+						</div>
+						<div class="mb-3">
+							<label for="fabricacao" class="form-label">Data de Fabricação:</label>
+							<input type="text" class="form-control" id="fabricacao" name="fabricacao">
+						</div>
+						<div class="mb-3">
+							<label for="validade" class="form-label">Data de Validade:</label>
+							<input type="text" class="form-control" id="validade" name="validade">
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="submit" class="btn btn-primary">Atualizar</button>
+						<button type="button" class="btn btn-secondary">Voltar</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+		crossorigin="anonymous"></script>
 	<script src="main.js"></script>
+	<script src="update.js"></script>
 </body>
+
 </html>

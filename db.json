@@ -1,16 +1,6 @@
 {
   "remedios": [
     {
-      "nome": "Dipirona 500MG",
-      "fabricante": "Astrazenica",
-      "protocolo_clinico": "Tratamento de dor de cabeça",
-      "lote": "5647982",
-      "fabricacao": "10/02/2019",
-      "validade": "10/02/2025",
-      "id": "1",
-      "estoque": 20
-    },
-    {
       "nome": "Paracetamol 500MG",
       "fabricante": "Bayer",
       "protocolo_clinico": "Redução de febre",
