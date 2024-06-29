@@ -80,6 +80,7 @@ async function deletarRemedioPorId(id) {
 	} catch (error) {
 		console.error('Erro ao deletar o remédio:', error.message);
 	}
+	location.href='index.html'
 }
 
 document.getElementById('formEstoque').addEventListener('submit', async function (e) {
