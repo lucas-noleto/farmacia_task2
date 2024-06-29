@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" style="background-color: chartreuse;">
 
 <head>
 	<meta charset="UTF-8">
@@ -14,7 +14,7 @@
 </head>
 
 <body>
-	<main class="container-fluid mt-5">
+	<main class="container-fluid mt-5" style="padding-top: 20px; padding-bottom: 140px;" >
 		<div class="row mt-3 text-center">
 			<div class="col">
 				<h4><strong>Cadastro Remédio</strong></h4>
@@ -43,11 +43,11 @@
 						<input type="text" class="form-control" id="lote" name="lote" placeholder="Digite o lote">
 					</div>
 					<div class="mb-3">
-						<label for="fabricacao" class="form-label">Data de Fabricação:</label>
+						<label for="fabricacao" class="form-label"><strong>Data de Fabricação:</strong></label>
 						<input type="date" class="form-control" id="fabricacao" name="fabricacao">
 					</div>
 					<div class="mb-3">
-						<label for="validade" class="form-label">Data de Validade:</label>
+						<label for="validade" class="form-label"><strong>Data de Validade:</strong></label>
 						<input type="date" class="form-control" id="validade" name="validade">
 					</div>
 					<button type="button" class="btn btn-primary" onclick="cadastraRemedios()">Cadastrar Remédio</button>
