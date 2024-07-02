@@ -33,7 +33,6 @@ async function alimentaTabela(data) {
         </td>
     </tr>
   `);
-
 	const conteudoElement = document.getElementById('conteudo');
 	if (conteudoElement) {
 		conteudoElement.innerHTML = htmlData.join('');
